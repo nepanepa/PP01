@@ -50,7 +50,6 @@ namespace Musoeun
 	class MGameLoop
 	{
 	public:
-
 		bool isGameRunning = false;
 
 		MGameLoop() {}
@@ -68,6 +67,7 @@ namespace Musoeun
 				Update();
 				Render();
 			}
+
 			Release();
 		}
 	};

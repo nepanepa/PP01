@@ -1,10 +1,6 @@
 ﻿  Lecture03.cpp
 C:\Users\김용준\source\repos\PP01\PP02\MGameLoop.hpp(7,2): error C2144: 구문 오류: void'은(는) ';' 다음에 와야 합니다.
-C:\Users\김용준\source\repos\PP01\PP02\MGameLoop.hpp(22,15): error C2039: 'Execute': 'MCommand'의 멤버가 아닙니다.
-C:\Users\김용준\source\repos\PP01\PP02\MCommand.hpp(3): message : 'MCommand' 선언을 참조하십시오.
 C:\Users\김용준\source\repos\PP01\PP02\MGameLoop.hpp(44,11): error C2065: 'key': 선언되지 않은 식별자입니다.
-C:\Users\김용준\source\repos\PP01\PP02\MGameLoop.hpp(63,4): error C3861: 'Initialize': 식별자를 찾을 수 없습니다.
-C:\Users\김용준\source\repos\PP01\PP02\MGameLoop.hpp(67,5): error C3861: 'Input': 식별자를 찾을 수 없습니다.
 C:\Users\김용준\source\repos\PP01\PP02\MGameLoop.hpp(74,1): error C2059: 구문 오류: '}'
 C:\Users\김용준\source\repos\PP01\PP02\MGameLoop.hpp(74,1): error C2143: 구문 오류: ';'이(가) '}' 앞에 없습니다.
 C:\Users\김용준\source\repos\PP01\PP02\Lecture03.cpp(6,1): error C2143: 구문 오류: ';'이(가) '{' 앞에 없습니다.

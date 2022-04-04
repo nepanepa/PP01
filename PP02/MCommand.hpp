@@ -1,10 +1,13 @@
 #pragma once
 
-class MCommand
+namespace Musoeun
 {
-public :
-	MCommand() {}
-	virtual ~MCommand() {}
+	class MCommand
+	{
+	public:
+		MCommand() {}
+		virtual ~MCommand() {}
 
-	virtual void execute() {}
-};
+		virtual void Execute() {}
+	};
+}

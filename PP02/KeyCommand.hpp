@@ -1,10 +1,7 @@
 #pragma once
 #include "MCommand.hpp"
 
-using namespace Musoeun;
-
-
-class JumpCommand : public MCommand
+class JumpCommand : public Musoeun::MCommand
 {
 public:
 	void Execute()
@@ -13,7 +10,7 @@ public:
 	}
 };
 
-class RunCommand : public MCommand
+class RunCommand : public Musoeun::MCommand
 {
 public:
 	void Execute()
@@ -22,25 +19,25 @@ public:
 	}
 };
 
-class LeftCommand : public MCommand
+class LeftCommand : public Musoeun::MCommand
 {
 public:
 	void Execute()
 	{
-		std::cout << "¸¾¸¶¹Ì¾Æ ¿ÞÂÊ!!";
+		std::cout << "¾Ñ½Î ¿ÞÂÊ!!";
 	}
 };
 
-class RightCommand : public MCommand
+class RightCommand : public Musoeun::MCommand
 {
 public:
 	void Execute()
 	{
-		std::cout << "¸¾¸¶¹Ì¾Æ ¿À¸¥ÂÊ!!";
+		std::cout << "¾Ñ½Î ¿À¸¥ÂÊ!!";
 	}
 };
 
-class DownCommand : public MCommand
+class DownCommand : public Musoeun::MCommand
 {
 public:
 	void Execute()
