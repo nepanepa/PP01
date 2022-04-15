@@ -23,10 +23,10 @@ namespace MuSeoun_Engine
 			CONSOLE_CURSOR_INFO concoleCursorinfo;
 			concoleCursorinfo.bVisible = visible;
 			concoleCursorinfo.dwSize = 1;
-			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), &concoleCursorinfo);
+			SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), &consoleCursorInfo);
 		}
 
-		void DrawString(sring s)
+		void DrawString(string s)
 		{
 			cout << s;
 		}

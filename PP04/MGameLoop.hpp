@@ -3,7 +3,7 @@
 #include <chrono>
 #include <thread>
 #include <Windows.h>
-#include "MConsolUtil.hpp"
+#include "Player.hpp"
 
 using namespace std;
 
@@ -12,27 +12,29 @@ namespace MuSeoun_Engine
 	class MGameLoop
 	{
 	private:
-		bool isGameRunning;
+		bool _isGameRunning;
 		MConsoleRenderer cRenderer;
+		chrono::system_clock::time_point startRenderTimePoint;
+		chrono::duration<double> renderDuration;
+		Player p;
 
 	public:
-		MGameLoop()
-		{
-			isGameRunning = false;
-		}
+		MGameLoop() { _isGameRunning = false; }
 		~MGameLoop() {} 
 
 		void Run()
 		{
-			isGameRunning = true;
-
+			_isGameRunning = true;
 			lnitialize();
 
+			startRenderTimePoint = chrono::system_clock::now();
 			while (_isGameRunning)
 			{
+				chrono::system_clock::time_point startRenderTimePoint = chrono::system_clock::now();
 				Input();
 				Update();
 				Render();
+				chrono::duration<double> renderDuration = chrono::system_clock::now() - startRenderTimePoint;
 			}
 
 			Release();
@@ -40,7 +42,7 @@ namespace MuSeoun_Engine
 
 		void Stop()
 		{
-			isGameRunning = false;
+			_isGameRunning = false;
 		}
 
 	private:
@@ -57,11 +59,11 @@ namespace MuSeoun_Engine
 		{
 			if (GetAsyncKeyState(VK_SPACE) == -0x8000 || GetAsyncKeyState(VK_SPACE) == -0x8001)
 			{
-				
+				p.isKeyPressed();
 			}
 			else
 			{
-				
+				p.isKeyUnPressed();
 			}
 
 		}
@@ -71,20 +73,19 @@ namespace MuSeoun_Engine
 		}
 		void Render()
 		{
-			chrono::system_clock::time_point startRenderTimePoint = chrono::system_clock::now();
-
+			
 			cRenderer.Clear();
-			cRenderer.MoveCursor(10, 20);
-			cRenderer.DrawString("test");
 
-			chrono::duration<double> renderDuration = chrono::system_clock::now() - startRenderTimePoint;
+			cRenderer.MoveCursor(p.x, p.y);
+			cRenderer.DrawString("P");
 
-			string fps = "FPS(millisconds):" + to_string(renderDuration.count());
+			cRenderer.DrawString(10, 20);
+			renderDuration = chrono::system_clock::now() - startRenderTimePoint;
+			startRenderTimePoint = chrono::system_clock::now();
+			string fps = "FPS: " + to_string(1.0/renderDuration.count());
 			cRenderer.DrawString(fps);
 
-			//int remainingFrameTime = 100 - (int)(renderDuration.count() * 1000.0);
-			//if (remainingFrameTime > 0)
-				//this_thread::sleep_for(chrono::milliseconds(remainingFrameTime));
+			this_thread::sleep_for(chrono::microseconds(20));
 		}
 
 		void Release() {}
