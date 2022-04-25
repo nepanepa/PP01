@@ -2,6 +2,8 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include "MConsolUtil.hpp"
+#include <string>
 #include <Windows.h>
 #include "Player.hpp"
 

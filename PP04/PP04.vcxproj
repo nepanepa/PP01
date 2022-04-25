@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MConsolUtil.hpp" />
     <ClInclude Include="MGameLoop.hpp" />
+    <ClInclude Include="Monster.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
