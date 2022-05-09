@@ -2,15 +2,15 @@
 
 namespace Musoeun
 {
-	MCommand* Key[5]
+	MCommand* key[5];
 
 	void Initialize()
 	{
-		Key[0] = new LeftCommand();
-		Key[1] = new RightCommand();
-		Key[2] = new DownCommand();
-		Key[3] = new JumpCommand();
-		Key[4] = new RunCommand();
+		key[0] = new LeftCommand();
+		key[1] = new RightCommand();
+		key[2] = new DownCommand();
+		key[3] = new JumpCommand();
+		key[4] = new RunCommand();
 		//std::cout << "초기화 중...\n";
 	}
 
@@ -19,11 +19,10 @@ namespace Musoeun
 		int input;
 		std::cin >> input;
 
-		Key[input]->Execute();
-
-		}
+		key[input]->Execute();
 
 		//std::cout << "입력 중...\n";
+
 	}
 
 	void Update()
@@ -39,13 +38,13 @@ namespace Musoeun
 	void Release()
 	{
 		//std::cout << "삭제 중...\n";
+
 		for (size_t i = 0; i < 5; i++)
 		{
 			delete(key[i]);
 		}
+
 	}
-
-
 
 	class MGameLoop
 	{

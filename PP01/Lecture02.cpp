@@ -16,45 +16,45 @@
 //		cout << "게임 오브젝트 소멸!\n";
 //	}
 //
-//	virtual  void Start()
+//	virtual void Start()
 //	{
-//		cout << "게임 오브젝트 스타트! \n";
+//		cout << "게임 오브젝트 스타트!\n";
 //	}
-//	virtual  void Update()
+//	virtual	void Update()
 //	{
-//		cout << "게임 오브젝트 업데이트! \n";
+//		cout << "게임 오브젝트 업데이트!\n";
 //	}
 //};
 //
 //class Player : public GameObject
 //{
-//public :
+//public:
 //	int HP = 100;
 //
 //	Player()
 //	{
-//		cout << "김용준 생성!!! \n";
+//		cout << "플레이어 생성!!! \n";
 //	}
 //	~Player()
 //	{
-//		cout << "김용준 소멸!\n";
+//		cout << "플레이어 소멸!\n";
 //	}
 //
 //	void Start()
 //	{
-//		cout << "김용준의 HP는" << HP << "입니다!\n";
+//		cout << "플레이어의 HP는" << HP << "입니다!\n";
 //	}
 //	void Update()
 //	{
-//		cout << "김용준 업데이트!!! \n";
+//		cout << "플레이어 업데이트!!! \n";
 //	}
 //};
-//
 //class Enemy : public GameObject
 //{
 //public:
 //
 //	int HP = 100;
+//
 //
 //	Enemy()
 //	{
@@ -63,8 +63,9 @@
 //
 //	~Enemy()
 //	{
-//		cout << "적 소멸!!! \n";
+//		cout << "적 소멸!\n";
 //	}
+//	
 //
 //	void Start()
 //	{
@@ -91,16 +92,15 @@
 //		p->Update();
 //		e->Update();
 //
-//		cout << "입력해주세요 (1: 게임 종료 , 2: 게임 계속): ";
+//		cout << "입력해주세요 (1:게임 종료 , 2: 게임 계속): ";
 //		int input;
 //		cin >> input;
-//		if (input == 1)
-//			is_game_running = false;
+//		if(input == 1)
+//			is_game_running = false;		
 //	}
 //
-//	delete(p);
+//	delete(p);	
 //	delete(e);
 //
 //	return 0;
 //}
-

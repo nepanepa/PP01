@@ -9,7 +9,6 @@ public:
 		std::cout << "¾Ñ½Î Á¡ÇÁ!!";
 	}
 };
-
 class RunCommand : public Musoeun::MCommand
 {
 public:
@@ -18,7 +17,6 @@ public:
 		std::cout << "¾Ñ½Î ´Ş¸®±â!!";
 	}
 };
-
 class LeftCommand : public Musoeun::MCommand
 {
 public:
@@ -27,21 +25,19 @@ public:
 		std::cout << "¾Ñ½Î ¿ŞÂÊ!!";
 	}
 };
-
 class RightCommand : public Musoeun::MCommand
 {
 public:
 	void Execute()
 	{
-		std::cout << "¾Ñ½Î ¿À¸¥ÂÊ!!";
+		std::cout << "¸¾¸¶¹Ì¾ß ¿À¸¥ÂÊ!!";
 	}
 };
-
 class DownCommand : public Musoeun::MCommand
 {
 public:
 	void Execute()
 	{
-		std::cout << "ÀÚÁ¸½É µûÀ© ¾ø´Ù ¾¥±¸¸®±â!!";
+		std::cout << "ÀÚÁ¸½É µûÀ© ¾ø´Ù ¾¥±¸¸®!!";
 	}
 };

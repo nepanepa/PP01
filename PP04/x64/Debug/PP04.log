@@ -1,1 +1,6 @@
-﻿
+﻿  A.cpp
+  main.cpp
+C:\Users\YUHAN\source\repos\PP01\PP07\PP08\PP04\MGameLoop.hpp(62,7): error C2039: 'isKeyUnpressed': 'Player'의 멤버가 아닙니다.
+C:\Users\YUHAN\source\repos\PP01\PP07\PP08\PP04\Player.hpp(1): message : 'Player' 선언을 참조하십시오.
+  Player.hpp
+  코드를 생성하고 있습니다...

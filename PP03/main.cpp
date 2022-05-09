@@ -1,28 +1,28 @@
 #include <iostream>
 using namespace std;
 
-class a
+class A
 {
 public:
-	virtual void dynamic_printf()
+	virtual void dynamic_print()
 	{
 		cout << "´ÙÀÌ³ª¹ÌÅ© µ¥Çò\n";
 	}
 
-	 void static_print()
+	void static_print()
 	{
 		cout << "µ¥Çì\n";
 	}
 };
 
-class b : public a
+class B : public A
 {
-public :
-	void dynamic_printf()
+public:
+	void dynamic_print()
 	{
 		cout << "´ÙÀÌ³ª¹ÌÅ© ÇìÂm\n";
 	}
-	void static_print() 
+	void static_print()
 	{
 		cout << "ÇìÂm\n";
 	}
@@ -33,14 +33,16 @@ public :
 	}
 };
 
+
+
 void main()
 {
-	a* tempa;
-	b* tempb = new b();
-	tempa = tempb;
-	tempa->static_print();
-	tempb->static_print();
+	A* tempA;
+	B* tempB = new B();
+	tempA = tempB;
+	tempA->static_print();
+	tempB->static_print();
 
-	tempa->dynamic_printf();
-	tempb->dynamic_printf();
-} 
+	tempA->dynamic_print();
+	tempB->dynamic_print();
+}

@@ -1,5 +1,6 @@
 #pragma once
 
+
 namespace Musoeun
 {
 	class MCommand
@@ -8,6 +9,13 @@ namespace Musoeun
 		MCommand() {}
 		virtual ~MCommand() {}
 
-		virtual void Execute() {}
+		virtual void Execute() {	}
 	};
 }
+
+
+// overload
+// override
+// virtual
+
+//binding -> 
