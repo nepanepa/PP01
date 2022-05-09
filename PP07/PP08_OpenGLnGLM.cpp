@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#pragma comment(lib,"opengl32")
+//외부에 무언가를 갖다가 쓸 때
+
+
 static void error_callback(int error, const char* description)
 {
     fputs(description, stderr);
@@ -34,8 +38,15 @@ int main(void)
         ratio = width / (float)height;
 
 
-        //glClearColor(0, 0, 1, 1);
-        //glClear(GL_COLOR_BUFFER_BIT);
+        glClearColor(0.3f, 0.3f, 0.3f, 1);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        glBegin(GL_POINT);
+        //GL_POINT점을 그리겠다
+        glColor3f(1.0f, 0.0f, 0.0f);
+        glVertex2f(0.0f, 0.0f);
+        glEnd();
+
 
         glfwSwapBuffers(window);
         glfwPollEvents();
