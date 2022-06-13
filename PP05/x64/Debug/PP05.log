@@ -1,2 +1,2 @@
 ﻿  main.cpp
-C:\Users\YUHAN\source\repos\PP01\PP07\PP08\PP05\MGameLoop.hpp(5,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'Player.hpp': No such file or directory
+C:\Users\YUHAN\source\repos\PP01\PP02\PP05\MGameLoop.hpp(5,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'Player.hpp': No such file or directory

@@ -1,0 +1,7 @@
+﻿  PP12_Bitmap.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: 'APIENTRY': 매크로 재정의
+C:\vcpkg\installed\x64-windows\include\GLFW\glfw3.h(123): message : 'APIENTRY'의 이전 정의를 참조하십시오.
+C:\Users\YUHAN\source\repos\PP01\PP02\PP12_Bitmap\PP12_Bitmap.cpp(23,54): warning C4554: '^': 연산자 우선 순위에 오류가 있는지 확인하세요. 괄호를 사용하여 우선 순위를 명확하게 지정하세요.
+  test.cpp
+  코드를 생성하고 있습니다...
+  PP12_Bitmap.vcxproj -> C:\Users\YUHAN\source\repos\PP01\PP02\x64\Debug\PP12_Bitmap.exe
